@@ -2,10 +2,9 @@
 require_once ("src/classes/HangoutReader.php");
 
 $hReader = new HangoutReader();
-$convs = $hReader->getConversations();
 
 $output = "";
-foreach($convs as $c){
+foreach($hReader->getConversations() as $c){
     $output .= "<a href='conversation.php?id=".$c->id."' class='pointer'><li class='list-group-item'>".$c->participant."</li></a>";
 }
 ?>
