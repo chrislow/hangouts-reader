@@ -2,3 +2,7 @@
     max-width: 300px !important;
     margin: 200px auto;
 }
+
+.list-group-item:last-child {
+    margin-bottom: 10px;
+}

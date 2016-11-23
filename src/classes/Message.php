@@ -8,9 +8,9 @@
  */
 class Message
 {
-    private $text;
-    private $timestamp;
-    private $sender_id;
+    public $text;
+    public $timestamp;
+    public $sender_id;
 
     /**
      * Message constructor.

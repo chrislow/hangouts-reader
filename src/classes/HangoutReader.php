@@ -92,9 +92,15 @@ class HangoutReader
         return $messages;
     }
 
+    /**
+     * Saves all conversations into a new .json file
+     */
     private function storeConversations(){
         $fp = fopen($_SERVER['DOCUMENT_ROOT']."/hangout-reader/json/built/conversations.json", "w");
-        fwrite($fp, json_encode($this->conversations));
+        fwrite($fp, json_encode([
+            "user_id" => $this->user_id,
+            "conversations" => $this->conversations
+        ]));
         fclose($fp);
     }
 }
